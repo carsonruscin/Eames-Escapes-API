@@ -1,0 +1,51 @@
+[
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 1,
+      "fields": {
+        "name": "WiFi"
+      }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 2,
+      "fields": {
+        "name": "Pool"
+      }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 3,
+      "fields": {
+        "name": "Hot Tub"
+      }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 4,
+      "fields": {
+        "name": "Outdoor Grill"
+      }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 5,
+      "fields": {
+        "name": "Breakfast Included"
+      }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 6,
+      "fields": {
+        "name": "Gym"
+      }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 7,
+      "fields": {
+        "name": "Pet Friendly"
+      }
+    }
+  ]

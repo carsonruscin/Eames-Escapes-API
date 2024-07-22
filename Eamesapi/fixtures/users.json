@@ -1,0 +1,35 @@
+[
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "first_name": "Carson",
+        "last_name": "Ruscin",
+        "email": "carsonruscin@email.com",
+        "username": "CarsonR",
+        "password": "password"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+        "first_name": "Cullen",
+        "last_name": "Ruscin",
+        "email": "cullenruscin@email.com",
+        "username": "CullenR",
+        "password": "password"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 3,
+      "fields": {
+        "first_name": "Jacqueline",
+        "last_name": "Ruscin",
+        "email": "jacquelineruscin@email.com",
+        "username": "JacquelineR",
+        "password": "password"
+      }
+    }
+  ]

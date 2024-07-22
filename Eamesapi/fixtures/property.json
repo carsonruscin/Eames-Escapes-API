@@ -1,0 +1,20 @@
+[
+    {
+      "model": "Eamesapi.property",
+      "pk": 1,
+      "fields": {
+        "name": "The Alexander House",
+        "owner": 1,
+        "property_type": 1,
+        "description": "A modern classic",
+        "price_per_night": "500.00",
+        "cleaning_fee": "50.00",
+        "address": "1138 Alexander Avenue",
+        "city": "Nashville",
+        "state": "Tennessee",
+        "max_guests": 5,
+        "bedrooms": 4,
+        "bathrooms": 2
+      }
+    }
+  ]

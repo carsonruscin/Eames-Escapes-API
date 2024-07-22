@@ -1,0 +1,11 @@
+[
+    {
+      "model": "Eamesapi.propertyimage",
+      "pk": 1,
+      "fields": {
+        "property_id": 1,
+        "image": "property_images/Alexander-House-Test-Image.jpg",
+        "is_primary": true
+      }
+    }
+  ]
