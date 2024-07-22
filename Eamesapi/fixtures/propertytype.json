@@ -1,0 +1,23 @@
+[
+    {
+      "model": "Eamesapi.propertytype",
+      "pk": 1,
+      "fields": {
+        "name": "Luxury Estate"
+      }
+    },
+    {
+        "model": "Eamesapi.propertytype",
+        "pk": 2,
+        "fields": {
+          "name": "Ranch"
+        }
+      },
+      {
+        "model": "Eamesapi.propertytype",
+        "pk": 3,
+        "fields": {
+          "name": "Cottage"
+        }
+      }
+  ]
