@@ -1,0 +1,9 @@
+[
+    {
+      "model": "Eamesapi.landingpageimage",
+      "pk": 1,
+      "fields": {
+        "image": "landing_page/test-landing-page-image.jpg"
+      }
+    }
+  ]
