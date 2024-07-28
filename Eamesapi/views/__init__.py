@@ -1,0 +1,1 @@
+from .landingpageimage import serve_landing_page_image
