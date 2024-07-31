@@ -5,7 +5,7 @@ import os
 
 
 def serve_landing_page_image(request):
-    image_path = os.path.join(settings.MEDIA_ROOT, 'landing_page', 'test-landing-page-image.jpg')
+    image_path = os.path.join(settings.MEDIA_ROOT, 'landing_page', 'test-landing-page-image-wide.jpg')
     if os.path.exists(image_path):
         return FileResponse(open(image_path, 'rb'), content_type='image/jpeg')
     else:

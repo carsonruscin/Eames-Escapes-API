@@ -1,20 +1,192 @@
 [
-    {
-      "model": "Eamesapi.property",
-      "pk": 1,
-      "fields": {
-        "name": "The Alexander House",
-        "owner": 1,
-        "property_type": 1,
-        "description": "A modern classic",
-        "price_per_night": "500.00",
-        "cleaning_fee": "50.00",
-        "address": "1138 Alexander Avenue",
-        "city": "Nashville",
-        "state": "Tennessee",
-        "max_guests": 5,
-        "bedrooms": 4,
-        "bathrooms": 2
-      }
+  {
+    "model": "Eamesapi.property",
+    "pk": 1,
+    "fields": {
+      "name": "The Alexander House",
+      "owner": 1,
+      "property_type": 1,
+      "description": "A modern classic",
+      "price_per_night": "500.00",
+      "cleaning_fee": "50.00",
+      "address": "1138 Alexander Avenue",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 5,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "image": "property_images/The-Alexander-House.jpg"
     }
-  ]
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 2,
+    "fields": {
+      "name": "Harmony Cottage",
+      "owner": 2,
+      "property_type": 3,
+      "description": "Cozy retreat near downtown",
+      "price_per_night": "375.00",
+      "cleaning_fee": "50.00",
+      "address": "224 Melody Lane",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 4,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "image": "property_images/Harmony-Cottage.jpg"
+    }
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 3,
+    "fields": {
+      "name": "Skyline Loft",
+      "owner": 3,
+      "property_type": 1,
+      "description": "Urban oasis with city views",
+      "price_per_night": "725.00",
+      "cleaning_fee": "50.00",
+      "address": "789 High Street",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 6,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "image": "property_images/Skyline-Loft.jpeg"
+    }
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 4,
+    "fields": {
+      "name": "Rustic Ranch",
+      "owner": 1,
+      "property_type": 2,
+      "description": "Countryside charm",
+      "price_per_night": "450.00",
+      "cleaning_fee": "50.00",
+      "address": "1010 Farm Road",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 8,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "image": "property_images/Rustic-Ranch.jpg"
+    }
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 5,
+    "fields": {
+      "name": "Music Row Suite",
+      "owner": 2,
+      "property_type": 1,
+      "description": "Musician's paradise",
+      "price_per_night": "550.00",
+      "cleaning_fee": "50.00",
+      "address": "432 Rhythm Avenue",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 3,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "image": "property_images/Music-Row-Suite.jpg"
+    }
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 6,
+    "fields": {
+      "name": "Grand Ole Stay",
+      "owner": 3,
+      "property_type": 1,
+      "description": "Historic charm meets modern luxury",
+      "price_per_night": "875.00",
+      "cleaning_fee": "50.00",
+      "address": "567 Legacy Street",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 10,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "image": "property_images/Grand-Ole-Stay.jpg"
+    }
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 7,
+    "fields": {
+      "name": "Riverside Retreat",
+      "owner": 1,
+      "property_type": 3,
+      "description": "Tranquil waterfront escape",
+      "price_per_night": "625.00",
+      "cleaning_fee": "50.00",
+      "address": "101 River Road",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 7,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "image": "property_images/Riverside-Retreat.jpg"
+    }
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 8,
+    "fields": {
+      "name": "Neon Nights Studio",
+      "owner": 2,
+      "property_type": 1,
+      "description": "Vibrant downtown living",
+      "price_per_night": "400.00",
+      "cleaning_fee": "50.00",
+      "address": "321 Neon Way",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "image": "property_images/Neon-Nights-Studio.jpeg"
+    }
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 9,
+    "fields": {
+      "name": "Green Hills Haven",
+      "owner": 3,
+      "property_type": 1,
+      "description": "Upscale neighborhood gem",
+      "price_per_night": "700.00",
+      "cleaning_fee": "50.00",
+      "address": "888 Hillside Drive",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 9,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "image": "property_images/Green-Hills-Haven.jpg"
+    }
+  },
+  {
+    "model": "Eamesapi.property",
+    "pk": 10,
+    "fields": {
+      "name": "Honky Tonk Hideaway",
+      "owner": 1,
+      "property_type": 3,
+      "description": "Downtown party pad",
+      "price_per_night": "525.00",
+      "cleaning_fee": "50.00",
+      "address": "555 Broadway",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "max_guests": 6,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "image": "property_images/Honky-Tonk-Hideaway.jpg"
+    }
+  }
+]

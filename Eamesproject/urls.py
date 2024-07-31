@@ -7,7 +7,9 @@ from Eamesapi.views import *
 from Eamesapi.models import *
 from rest_framework.authtoken.views import obtain_auth_token
 
+
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'properties', PropertiesViewSet, 'property')
 
 urlpatterns = [
     path('', include(router.urls)),
