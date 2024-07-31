@@ -15,3 +15,4 @@ class Property(models.Model):
     max_guests = models.IntegerField()
     bedrooms = models.IntegerField()
     bathrooms = models.IntegerField()
+    image = models.ImageField(upload_to='property_images/', null=True, blank=True)

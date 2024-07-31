@@ -24,12 +24,12 @@ class PropertySerializer(serializers.ModelSerializer):
             "max_guests",
             "bedrooms",
             "bathrooms",
+            "image",
         )
 
 class PropertiesViewSet(ViewSet):
     """Request handlers for properties"""
 
-    # permission_classes = (permissions.AllowAny)
 
     def list(self, request):
 
