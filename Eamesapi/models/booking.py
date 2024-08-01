@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from .property import Property
 
 class Booking(models.Model):
-    property_id = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='bookings')
+    related_property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='bookings')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
     check_in_date = models.DateField()
     check_out_date = models.DateField()
