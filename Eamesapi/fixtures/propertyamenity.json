@@ -3,7 +3,7 @@
       "model": "Eamesapi.propertyamenity",
       "pk": 1,
       "fields": {
-        "related_property_id": 1,
+        "related_property": 1,
         "amenity": 1
       }
     },
@@ -11,7 +11,7 @@
         "model": "Eamesapi.propertyamenity",
         "pk": 2,
         "fields": {
-          "related_property_id": 1,
+          "related_property": 1,
           "amenity": 2
         }
       },
@@ -19,7 +19,7 @@
         "model": "Eamesapi.propertyamenity",
         "pk": 3,
         "fields": {
-          "related_property_id": 1,
+          "related_property": 1,
           "amenity": 7
         }
       }
