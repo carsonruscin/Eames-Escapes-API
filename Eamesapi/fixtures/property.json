@@ -3,7 +3,7 @@
     "model": "Eamesapi.property",
     "pk": 1,
     "fields": {
-      "name": "The Alexander House",
+      "name": "Alexander House",
       "owner": 1,
       "property_type": 1,
       "description": "A modern classic",

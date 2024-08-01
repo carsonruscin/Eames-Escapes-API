@@ -1,12 +1,28 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from rest_framework import status
-from Eamesapi.models import Property
-from rest_framework import permissions
+from Eamesapi.models import Property, PropertyType, Amenity
+
+
+class AmenitySerializer(serializers.ModelSerializer):
+    """JSON serializer for amenities"""
+
+    class Meta:
+        model = Amenity
+        fields = ('id', 'name')
+
+class PropertyTypeSerializer(serializers.ModelSerializer):
+    """JSON serializer for property type"""
+
+    class Meta:
+        model = PropertyType
+        fields = ('id', 'name')
 
 class PropertySerializer(serializers.ModelSerializer):
     """JSON serializer for properties"""
+
+    property_type = PropertyTypeSerializer(read_only=True)
+    amenities = AmenitySerializer(many=True, read_only=True)
 
     class Meta:
         model = Property
@@ -25,7 +41,9 @@ class PropertySerializer(serializers.ModelSerializer):
             "bedrooms",
             "bathrooms",
             "image",
+            "amenities",
         )
+
 
 class PropertiesViewSet(ViewSet):
     """Request handlers for properties"""

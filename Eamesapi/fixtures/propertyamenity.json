@@ -3,7 +3,7 @@
       "model": "Eamesapi.propertyamenity",
       "pk": 1,
       "fields": {
-        "property_id": 1,
+        "related_property": 1,
         "amenity": 1
       }
     },
@@ -11,7 +11,7 @@
         "model": "Eamesapi.propertyamenity",
         "pk": 2,
         "fields": {
-          "property_id": 1,
+          "related_property": 1,
           "amenity": 2
         }
       },
@@ -19,7 +19,223 @@
         "model": "Eamesapi.propertyamenity",
         "pk": 3,
         "fields": {
-          "property_id": 1,
+          "related_property": 1,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 4,
+        "fields": {
+          "related_property": 2,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 5,
+        "fields": {
+          "related_property": 2,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 6,
+        "fields": {
+          "related_property": 2,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 7,
+        "fields": {
+          "related_property": 3,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 8,
+        "fields": {
+          "related_property": 3,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 9,
+        "fields": {
+          "related_property": 3,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 10,
+        "fields": {
+          "related_property": 4,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 11,
+        "fields": {
+          "related_property": 4,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 12,
+        "fields": {
+          "related_property": 4,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 13,
+        "fields": {
+          "related_property": 5,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 14,
+        "fields": {
+          "related_property": 5,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 15,
+        "fields": {
+          "related_property": 5,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 16,
+        "fields": {
+          "related_property": 6,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 17,
+        "fields": {
+          "related_property": 6,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 18,
+        "fields": {
+          "related_property": 6,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 19,
+        "fields": {
+          "related_property": 7,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 20,
+        "fields": {
+          "related_property": 7,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 21,
+        "fields": {
+          "related_property": 7,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 22,
+        "fields": {
+          "related_property": 8,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 23,
+        "fields": {
+          "related_property": 8,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 24,
+        "fields": {
+          "related_property": 8,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 25,
+        "fields": {
+          "related_property": 9,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 26,
+        "fields": {
+          "related_property": 9,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 27,
+        "fields": {
+          "related_property": 9,
+          "amenity": 7
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 28,
+        "fields": {
+          "related_property": 10,
+          "amenity": 1
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 29,
+        "fields": {
+          "related_property": 10,
+          "amenity": 5
+        }
+      },
+      {
+        "model": "Eamesapi.propertyamenity",
+        "pk": 30,
+        "fields": {
+          "related_property": 10,
           "amenity": 7
         }
       }
