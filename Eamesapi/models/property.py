@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from .propertytype import PropertyType
+from .amenity import Amenity
 
 class Property(models.Model):
     name = models.CharField(max_length=255)
@@ -16,3 +17,4 @@ class Property(models.Model):
     bedrooms = models.IntegerField()
     bathrooms = models.IntegerField()
     image = models.ImageField(upload_to='property_images/', null=True, blank=True)
+    amenities = models.ManyToManyField(Amenity, through='Eamesapi.PropertyAmenity', related_name='properties')
