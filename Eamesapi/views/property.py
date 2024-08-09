@@ -4,6 +4,7 @@ from rest_framework import serializers, status
 from Eamesapi.models import Property, PropertyType, Amenity
 from django.core.files.base import ContentFile
 from django.contrib.auth.models import User
+from rest_framework.permissions import IsAuthenticated
 import base64
 import re
 
@@ -63,10 +64,19 @@ class PropertySerializer(serializers.ModelSerializer):
 class PropertyViewSet(ViewSet):
     """Request handlers for properties"""
 
+    permission_classes = [IsAuthenticated] # Ensure the user is authenticated
 
     def list(self, request):
 
         properties = Property.objects.all()
+        serializer = PropertySerializer(properties, many=True, context={'request': request})
+        return Response(serializer.data)
+    
+    def list_by_owner(self, request):
+        """Handle GET requests for listing properties by owner (auth token in header)"""
+
+        owner = request.user
+        properties = Property.objects.filter(owner=owner)
         serializer = PropertySerializer(properties, many=True, context={'request': request})
         return Response(serializer.data)
     
