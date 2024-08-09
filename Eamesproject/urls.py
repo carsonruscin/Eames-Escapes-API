@@ -9,7 +9,9 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 
 router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'properties', PropertiesViewSet, 'property')
+router.register(r'properties', PropertyViewSet, 'property')
+router.register(r'amenities', AmenityViewSet, 'amenity')
+router.register(r'property-types', PropertyTypeViewSet, 'property-type')
 
 urlpatterns = [
     path('', include(router.urls)),
@@ -18,7 +20,6 @@ urlpatterns = [
     path("api-token-auth", obtain_auth_token),
     path("api-auth", include("rest_framework.urls", namespace="rest_framework")),
     path('landing-page-image/', serve_landing_page_image, name='landing_page_image'),
-    
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

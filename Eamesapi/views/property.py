@@ -60,7 +60,7 @@ class PropertySerializer(serializers.ModelSerializer):
         }
 
 
-class PropertiesViewSet(ViewSet):
+class PropertyViewSet(ViewSet):
     """Request handlers for properties"""
 
 
@@ -88,7 +88,7 @@ class PropertiesViewSet(ViewSet):
         new_property.description = data["description"]
         new_property.price_per_night = data["price_per_night"]
         new_property.cleaning_fee = data["cleaning_fee"]
-        new_property.address = data["address"]
+        # new_property.address = data["address"]
         new_property.city = data["city"]
         new_property.state = data["state"]
         new_property.max_guests = data["max_guests"]
