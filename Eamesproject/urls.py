@@ -20,7 +20,6 @@ urlpatterns = [
     path("api-token-auth", obtain_auth_token),
     path("api-auth", include("rest_framework.urls", namespace="rest_framework")),
     path('landing-page-image/', serve_landing_page_image, name='landing_page_image'),
-    path('properties/by-owner', PropertyViewSet.as_view({'get': 'list_by_owner'}), name='properties-by-owner'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
