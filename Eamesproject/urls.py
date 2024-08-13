@@ -19,7 +19,10 @@ urlpatterns = [
     path("login", login_user),
     path("api-token-auth", obtain_auth_token),
     path("api-auth", include("rest_framework.urls", namespace="rest_framework")),
-    path('landing-page-image/', serve_landing_page_image, name='landing_page_image'),
+    path('landing-page-image', serve_landing_page_image, name='landing_page_image'),
+    path('properties/luxury-estates', PropertyViewSet.as_view({'get': 'list_luxury_estates'}), name='luxury-estates'),
+    path('properties/ranches', PropertyViewSet.as_view({'get': 'list_ranches'}), name='ranches'),
+    path('properties/cottages', PropertyViewSet.as_view({'get': 'list_cottages'}), name='cottages'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -82,6 +82,33 @@ class PropertyViewSet(ViewSet):
         serializer = PropertySerializer(properties, many=True, context={'request': request})
         return Response(serializer.data)
     
+    def list_properties_by_type(self, request, property_type_name):
+        """Helper method to list properties by property type name"""
+
+        try:
+            property_type = PropertyType.objects.get(name=property_type_name)
+            properties = Property.objects.filter(property_type=property_type)
+            serializer = PropertySerializer(properties, many=True, context={'request': request})
+            return Response(serializer.data)
+        
+        except PropertyType.DoesNotExist:
+            return Response({"error": "Property type not found."}, status=status.HTTP_404_NOT_FOUND)
+
+    @action(detail=False, methods=['get'], url_path='luxury-estates')
+    def list_luxury_estates(self, request):
+        """List properties of type 'Luxury Estate' """
+        return self.list_properties_by_type(request, 'Luxury Estate')
+
+    @action(detail=False, methods=['get'], url_path='ranches')
+    def list_ranches(self, request):
+        """List properties of type 'Ranch' """
+        return self.list_properties_by_type(request, 'Ranch')
+
+    @action(detail=False, methods=['get'], url_path='cottages')
+    def list_cottages(self, request):
+        """List properties of type 'Cottage' """
+        return self.list_properties_by_type(request, 'Cottage')
+    
     def create(self, request):
         """Handle POST requests for creating a new property"""
 
@@ -139,8 +166,10 @@ class PropertyViewSet(ViewSet):
     
     def update(self, request, pk=None):
         """Handle PUT requests for updating a property"""
+
         try:
             updated_property = Property.objects.get(pk=pk, owner=request.user)
+
         except Property.DoesNotExist:
             return Response({
                 "error": "Property listing not found or you do not have permission to edit this property"
@@ -168,6 +197,7 @@ class PropertyViewSet(ViewSet):
         # Handle image upload only if "image" is in the request data and has changed
         if "image" in data:
             image_data = data["image"]
+
             try:
                 format, imgstr = image_data.split(";base64,")
                 ext = format.split("/")[-1]
@@ -183,6 +213,7 @@ class PropertyViewSet(ViewSet):
                     updated_property.image.delete(save=False)
                     # Save the new file name but do not trigger a database transaction yet
                     updated_property.image.save(f'{kebab_case_name}.{ext}', new_image_data, save=False)
+
             except ValueError:
                 return Response({"error": "Invalid image format"}, status=status.HTTP_400_BAD_REQUEST)
 
