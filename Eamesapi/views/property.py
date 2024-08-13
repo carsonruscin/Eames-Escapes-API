@@ -100,7 +100,6 @@ class PropertyViewSet(ViewSet):
         new_property.description = data["description"]
         new_property.price_per_night = data["price_per_night"]
         new_property.cleaning_fee = data["cleaning_fee"]
-        # new_property.address = data["address"]
         new_property.city = data["city"]
         new_property.state = data["state"]
         new_property.max_guests = data["max_guests"]
@@ -203,3 +202,18 @@ class PropertyViewSet(ViewSet):
 
         serializer = PropertySerializer(updated_property, context={"request": request})
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    def destroy(self, request, pk=None):
+        """Handle DELETE requests for properties"""
+
+        try:
+            property_to_delete = Property.objects.get(pk=pk, owner=request.user)
+            property_to_delete.delete()
+
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+        
+        except Property.DoesNotExist as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        
+        except Exception as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
