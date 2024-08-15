@@ -55,18 +55,22 @@ def register_user(request):
     # Load the JSON string of the request body into a dict
     req_body = json.loads(request.body.decode())
 
-    fields_to_check = [("email", User), ("username", User),]
+    errors = {}
 
-    # Check for existing fields
-    for field, model in fields_to_check:
-        if model.objects.filter(**{field: req_body[field]}).exists():
-            return JsonResponse(
-                {
-                    "status": status.HTTP_400_BAD_REQUEST,
-                    "message": f"A user with that {field.replace('_', ' ')} already exists.",
-                },
-                status=status.HTTP_400_BAD_REQUEST,
-            )
+    # Check for existing email
+    if User.objects.filter(email=req_body["email"]).exists():
+        errors["email"] = "A user with that email already exists."
+
+    # Check for existing username
+    if User.objects.filter(username=req_body["username"]).exists():
+        errors["username"] = "A user with that username already exists."
+
+    # If there are errors, return them
+    if errors:
+        return JsonResponse(
+            {"errors": errors},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
 
     # Create a new user by invoking the `create_user` helper method
     # on Django's built-in User model
@@ -80,7 +84,7 @@ def register_user(request):
 
 
     # Commit the user to the database by saving it
-    User.save()
+    new_user.save()
 
     # Use the REST Framework's token generator on the new user account
     token = Token.objects.create(user=new_user)
