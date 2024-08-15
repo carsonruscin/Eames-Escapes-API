@@ -47,5 +47,26 @@
       "fields": {
         "name": "Pet Friendly"
       }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 8,
+      "fields": {
+        "name": "Cocktail Bar"
+      }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 9,
+      "fields": {
+        "name": "Eame's Lounge Chair"
+      }
+    },
+    {
+      "model": "Eamesapi.amenity",
+      "pk": 10,
+      "fields": {
+        "name": "Library"
+      }
     }
   ]
